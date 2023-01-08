@@ -1,3 +1,5 @@
+include var.pug
+
 doctype html
 html(lang="en")
     head
@@ -7,4 +9,23 @@ html(lang="en")
         link(rel="stylesheet", href="style.css")
         title Construtor
     body 
-        
+        header: .container 
+            .navigation
+                .logo
+                    img(src="img/burgerMenu.png" alt="Menu" class="logo-burgerMenu") 
+                    h1.logo-title Constructor
+                .dropDownMenu 
+                    nav: ul
+                        for item in menu
+                            li: a(href="#")= item
+                            
+                    .search 
+                        img(src="img/search.png" alt="Search" class="search-icon")
+                        input(type="text" placeholder="Search Goods...")
+                .accout_bag 
+                    .accout-content 
+                        img(src="img/profile.png")
+                        p Account
+                    .bag-content
+                        img(src="img/bag.png")
+                        p Bag
